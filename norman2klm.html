@@ -2,229 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Norman vs. GOMS vs. KLM – Cognitive Models</title>
-
+  <title>Norman, GOMS & KLM – HCI Lab 01</title>
+  <!-- Minimal allowed CSS -->
   <style>
-    /* Minimal styling allowed in Lab 01: color only */
-    .row-norman { background-color: #fff3cd; } /* warm amber */
-    .row-goms   { background-color: #e7f3ff; } /* light blue */
-    .row-klm    { background-color: #e9f7ef; } /* light green */
-
-    .key-takeaway {
-      background-color: #fff3cd;
-      padding: 0.5em;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    nav a {
+      color: #003366;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 8px;
     }
   </style>
 </head>
 <body>
-
-  <!-- Page header -->
   <header>
-    <h1>Norman vs. GOMS vs. KLM</h1>
-    <p>Model-based evaluation and cognitive models (Dix et al., Chapter 12)</p>
+    <h1>Norman, GOMS & KLM Models in HCI</h1>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Norman vs GOMS</a></li>
+        <li><a href="norman2klm.html" aria-current="page">Norman, GOMS & KLM</a></li>
+        
+      </ul>
+    </nav>
   </header>
 
-  <!-- Primary navigation -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
-    </ul>
-  </nav>
-
-  <!-- Main content -->
   <main>
-
-    <!-- Comparison section -->
     <section>
-      <h2>Clean Comparison (Class &amp; Exam Reference)</h2>
+      <h2>Introduction</h2>
+      <p>
+        This page explores three important models in Human-Computer Interaction: 
+        Norman's Action Cycle, the GOMS model, and the Keystroke-Level Model (KLM). 
+        These frameworks help us understand and analyze how users interact with 
+        computer systems, each offering different perspectives and levels of detail.
+      </p>
+    </section>
 
-      <table border="1">
-        <caption>
-          Model-based evaluation: what each model explains vs. predicts
-        </caption>
+    <section>
+      <h2>Norman's Action Cycle</h2>
+      <p>
+        Norman's Action Cycle, described in Human-Computer Interaction (Dix et al., 
+        3rd edition, Chapter 9), provides a seven-stage framework for understanding 
+        user interaction with systems. The cycle consists of forming a goal, forming 
+        an intention, specifying an action, executing the action, perceiving the system 
+        state, interpreting the state, and evaluating the outcome against the goal.
+      </p>
+      <p>
+        This model emphasizes the cognitive processes involved in interaction and 
+        identifies two critical gaps: the Gulf of Execution (the difference between 
+        user intentions and allowable actions) and the Gulf of Evaluation (the effort 
+        required to interpret system state). Understanding these gulfs helps designers 
+        create more intuitive interfaces.
+      </p>
+    </section>
 
+    <section>
+      <h2>GOMS Model</h2>
+      <p>
+        The GOMS model (Goals, Operators, Methods, and Selection rules), discussed in 
+        Chapter 12 of the HCI textbook, provides a structured approach to modeling user 
+        task performance. Unlike Norman's conceptual framework, GOMS breaks down tasks 
+        into specific components that can be analyzed and quantified.
+      </p>
+      <p>
+        Goals represent what the user wants to accomplish, Operators are the basic 
+        actions available to the user, Methods are sequences of operators to achieve 
+        goals, and Selection rules determine which method to use when multiple options 
+        exist. GOMS is particularly useful for predicting expert user performance and 
+        comparing different interface designs.
+      </p>
+    </section>
+
+    <section>
+      <h2>Keystroke-Level Model (KLM)</h2>
+      <p>
+        The Keystroke-Level Model, also covered in Chapter 12, is a simplified version 
+        of GOMS that focuses on predicting task execution time. KLM breaks tasks down 
+        into primitive operators such as keystrokes, pointing with a mouse, drawing, 
+        mental preparation, and system response time.
+      </p>
+      <p>
+        Each operator has an associated time value based on empirical research, allowing 
+        designers to calculate total task time. For example, a keystroke takes 
+        approximately 0.2 seconds, while pointing to a target with a mouse takes about 
+        1.1 seconds. KLM is valuable for quick performance predictions without requiring 
+        extensive user testing.
+      </p>
+    </section>
+
+    <section>
+      <h2>Comparative Analysis</h2>
+      <table>
+        <caption>Comparison of Norman's Action Cycle, GOMS, and KLM</caption>
         <thead>
           <tr>
-            <th scope="col">Model</th>
-            <th scope="col">Category</th>
-            <th scope="col">What it Explains</th>
-            <th scope="col">What it Predicts</th>
+            <th scope="col">Aspect</th>
+            <th scope="col">Norman's Action Cycle</th>
+            <th scope="col">GOMS</th>
+            <th scope="col">KLM</th>
           </tr>
         </thead>
-
         <tbody>
-          <tr class="row-norman">
-            <th scope="row">Norman</th>
-            <td>Cognitive / descriptive</td>
-            <td>Understanding, errors, feedback, gulfs</td>
-            <td>❌ Nothing (no performance prediction)</td>
+          <tr>
+            <th scope="row">Primary Focus</th>
+            <td>Cognitive stages of user interaction</td>
+            <td>Task structure and execution</td>
+            <td>Time prediction for expert users</td>
           </tr>
-
-          <tr class="row-goms">
-            <th scope="row">GOMS</th>
-            <td>Predictive / analytic</td>
-            <td>Task structure for expert users</td>
-            <td>✔ Relative efficiency</td>
+          <tr>
+            <th scope="row">Level of Detail</th>
+            <td>High-level conceptual</td>
+            <td>Detailed task decomposition</td>
+            <td>Low-level physical operations</td>
           </tr>
-
-          <tr class="row-klm">
-            <th scope="row">KLM</th>
-            <td>Predictive / quantitative</td>
-            <td>Low-level physical and motor actions</td>
-            <td>✔ Execution time</td>
+          <tr>
+            <th scope="row">Main Purpose</th>
+            <td>Understanding interaction problems</td>
+            <td>Analyzing task procedures</td>
+            <td>Predicting execution time</td>
+          </tr>
+          <tr>
+            <th scope="row">Quantitative Analysis</th>
+            <td>Not applicable</td>
+            <td>Limited quantification</td>
+            <td>Precise time predictions</td>
+          </tr>
+          <tr>
+            <th scope="row">User Expertise</th>
+            <td>All levels of users</td>
+            <td>Primarily expert users</td>
+            <td>Expert users only</td>
+          </tr>
+          <tr>
+            <th scope="row">Design Application</th>
+            <td>Identifying usability issues</td>
+            <td>Comparing interaction methods</td>
+            <td>Optimizing task efficiency</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- KLM operators -->
     <section>
-      <h2>KLM Operators (Execution-Level Primitives)</h2>
-
+      <h2>What I Learned</h2>
       <p>
-        The Keystroke-Level Model (KLM) decomposes the <strong>execution phase</strong>
-        of interaction into a small set of primitive operators. KLM assumes the user
-        is expert and that the method has already been chosen.
+        Through studying these three models, I learned that HCI analysis requires 
+        different tools for different purposes. Norman's Action Cycle helps identify 
+        why interfaces feel difficult to use by revealing mismatches between user 
+        mental models and system design. It's particularly valuable during the early 
+        design phase when we're thinking about overall interaction flow.
       </p>
-
-      <table border="1">
-        <caption>
-          KLM operators (Dix et al., Chapter 12 – Cognitive Models / Physical &amp; Device Models)
-        </caption>
-
-        <thead>
-          <tr>
-            <th scope="col">Operator</th>
-            <th scope="col">Name</th>
-            <th scope="col">Meaning</th>
-            <th scope="col">Example</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <th scope="row">K</th>
-            <td>Keystroking</td>
-            <td>Pressing a key (including modifiers)</td>
-            <td>Typing a character or pressing Delete</td>
-          </tr>
-
-          <tr>
-            <th scope="row">B</th>
-            <td>Button press</td>
-            <td>Pressing a mouse button</td>
-            <td>Left-click</td>
-          </tr>
-
-          <tr>
-            <th scope="row">P</th>
-            <td>Pointing</td>
-            <td>Moving pointer to a target</td>
-            <td>Move cursor to an icon</td>
-          </tr>
-
-          <tr>
-            <th scope="row">H</th>
-            <td>Homing</td>
-            <td>Switching hand between devices</td>
-            <td>Keyboard → mouse</td>
-          </tr>
-
-          <tr>
-            <th scope="row">D</th>
-            <td>Drawing</td>
-            <td>Drawing lines using a pointing device</td>
-            <td>Dragging to draw a shape</td>
-          </tr>
-
-          <tr>
-            <th scope="row">M</th>
-            <td>Mental preparation</td>
-            <td>Preparing for a physical action</td>
-            <td>Pause before clicking the correct control</td>
-          </tr>
-
-          <tr>
-            <th scope="row">R</th>
-            <td>System response</td>
-            <td>Waiting for system feedback (if required)</td>
-            <td>Application loading</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Worked example -->
-    <section>
-      <h2>Worked Example: Correcting a Single Character</h2>
-
       <p>
-        Example task: the user notices a single-character error in a mouse-based
-        editor, deletes it, retypes it, and returns to the insertion point.
+        GOMS provides a middle ground, offering structure for analyzing how tasks are 
+        performed without requiring the detailed timing data of KLM. It's especially 
+        useful when comparing alternative designs or understanding expert workflows. 
+        The selection rules component helps predict user behavior when multiple paths 
+        to a goal exist.
       </p>
-
-      <ol>
-        <li>Move hand to mouse</li>
-        <li>Position mouse after bad character</li>
-        <li>Return to keyboard</li>
-        <li>Delete character</li>
-        <li>Type correction</li>
-        <li>Reposition insertion point</li>
-      </ol>
-
-      <p>One possible KLM operator sequence:</p>
-
-      <pre>
-H[mouse]
-P B[LEFT]
-H[keyboard]
-M K[DELETE]
-K[char]
-H[mouse] M P B[LEFT]
-      </pre>
-
       <p>
-        This sequence illustrates how KLM models only execution-level actions.
-        High-level planning, learning, and interpretation are not represented.
+        KLM taught me the power of quantitative prediction in interface design. By 
+        breaking tasks into primitive operations, we can estimate performance without 
+        extensive user testing. This is invaluable for quick design iterations, though 
+        it's limited to routine tasks performed by expert users and doesn't account 
+        for learning or error recovery.
+      </p>
+      <p>
+        Most importantly, I learned that these models complement each other. Norman's 
+        framework helps us understand the "why" of interaction problems, GOMS helps 
+        structure the "what" of task procedures, and KLM quantifies the "how long" 
+        for expert performance. Effective HCI analysis often requires applying multiple 
+        models to gain a complete understanding of user-system interaction.
       </p>
     </section>
 
-    <!-- Key takeaways -->
     <section>
-      <h2>Key Takeaways</h2>
-
-      <blockquote class="key-takeaway">
-        <p>
-          <strong>
-            The Keystroke-Level Model consists of seven primitive operators
-            (K, B, P, H, D, M, R) used to predict execution time for expert,
-            error-free interaction, and is a low-level instance of the GOMS framework.
-          </strong>
-        </p>
-      </blockquote>
-
-      <blockquote class="key-takeaway">
-        <p>
-          <strong>
-            KLM has only seven operators because it models execution,
-            not thinking about what to do.
-          </strong>
-        </p>
-      </blockquote>
+      <h2>References</h2>
+      <p>
+        Dix, A., Finlay, J., Abowd, G. D., & Beale, R. (2004). <em>Human-Computer 
+        Interaction</em> (3rd ed.). Pearson Education Limited.
+      </p>
+      <ul>
+        <li>Chapter 9: Cognitive Models in HCI (Norman's Action Cycle)</li>
+        <li>Chapter 12: Task Analysis and Modeling (GOMS and KLM)</li>
+      </ul>
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p><a href="index.html">Back to Home</a></p>
+    <p>HCI Lab 01 – Norman, GOMS & KLM Analysis</p>
   </footer>
-
 </body>
 </html>

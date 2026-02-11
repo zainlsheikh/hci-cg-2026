@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for proper text rendering -->
   <meta charset="UTF-8">
+  <title>HCI Lab 01 – Semantic HTML Foundations</title>
 
-  <!-- Page title shown in browser tab and screen readers -->
-  <title>Don Norman – Home</title>
+  <!-- Minimal allowed CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    nav a {
+      color: #003366;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Page header: identifies the site and its purpose -->
   <header>
-    <h1>Don Norman</h1>
-    <p>Human–Computer Interaction Philosopher</p>
+    <h1>Lab Practice & Assignment 01</h1>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Norman vs GOMS</a></li>
+        <li><a href="norman2klm.html">Norman, GOMS & KLM</a></li>
+        
+      </ul>
+    </nav>
   </header>
 
-  <!-- Primary navigation landmark for keyboard and screen reader users -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <!-- Current page is indicated using aria-current -->
-      <li>
-        <a href="index.html" aria-current="page">Home</a>
-      </li>
-
-      <!-- Navigation links to other site sections -->
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
-    </ul>
-  </nav>
-
-  <!-- Main content landmark: unique content of this page -->
   <main>
+
     <section>
-      <!-- Section heading establishes content hierarchy -->
-      <h2>Biography</h2>
-
-      <!-- Informative image with alternative text for accessibility -->
-      <img src="norman.jpg" alt="Portrait of Don Norman">
-
+      <h2>Purpose of the Lab</h2>
       <p>
-        Don Norman is a pioneer in the field of Human–Computer Interaction,
-        known for his work on user-centered design, usability, and cognitive
-        engineering.
+        The purpose of Lab Practice and Assignment 01 is to bring all students
+        to a common baseline level of semantic HTML skills while following
+        strict rules related to accessibility and structure.
+      </p>
+      <p>
+        This lab focuses on understanding and applying Human–Computer
+        Interaction (HCI) models, specifically Norman’s Action Cycle, GOMS,
+        and the Keystroke-Level Model (KLM).
       </p>
     </section>
+
+    <section>
+      <h2>Scope of Work</h2>
+      <p>
+        All content in this website is limited to the discussion of Norman’s
+        Action Cycle, GOMS, and KLM. The site avoids the use of JavaScript and
+        complex CSS to emphasize semantic structure and accessibility.
+      </p>
+    </section>
+
+    <section>
+      <h2>HCI Models Covered</h2>
+      <ul>
+        <li>Norman’s Seven Stages of Action</li>
+        <li>GOMS (Goals, Operators, Methods, Selection Rules)</li>
+        <li>KLM (Keystroke-Level Model and execution time prediction)</li>
+      </ul>
+    </section>
+
   </main>
 
-  <!-- Footer contains meta or supplementary information -->
   <footer>
-    <p>&copy; 2026 HCI–CG Course</p>
-  <p>
-    <a href="assignment01.html">Lab 01 Instructions</a> |
-    <a href="https://github.com/humeraaa/hci-cg-2026">Starter Code</a> |
-    <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
-  </p>
+    <p>
+      HCI Lab 01 – Semantic HTML Foundations
+    </p>
   </footer>
 
 </body>

@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
+  <title>CV – HCI Lab 01</title>
 
-  <!-- Page title shown in browser tab and announced by screen readers -->
-  <title>Don Norman – CV</title>
+  <!-- Minimal allowed CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    nav a {
+      color: #003366;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Page header: identifies the page -->
   <header>
     <h1>Curriculum Vitae</h1>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html" aria-current="page">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Norman vs GOMS</a></li>
+        <li><a href="norman2klm.html">Norman, GOMS & KLM</a></li>
+        
+      </ul>
+    </nav>
   </header>
 
-  <!-- Primary navigation: consistent across all pages -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-
-      <!-- Current page is indicated using aria-current -->
-      <li><a href="cv.html" aria-current="page">CV</a></li>
-
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
-    </ul>
-  </nav>
-
-  <!-- Main landmark: unique content of this page -->
   <main>
 
     <section>
+      <h2>Personal Information</h2>
+      <p>Name: Zain Sheikh</p>
+      <p>Field of Study: Human–Computer Interaction</p>
+    </section>
+
+    <section>
       <h2>Education</h2>
+      <article>
+        <h3>Undergraduate Studies</h3>
+        <p>
+          Bachelor-level studies focusing on computing concepts,
+          user-centered design, and Human–Computer Interaction.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
       <ul>
-        <li>PhD in Psychology – University of Pennsylvania</li>
-        <li>BSc in Engineering – MIT</li>
+        <li>Semantic HTML and accessibility</li>
+        <li>Understanding of HCI models</li>
+        <li>Basic CSS for readability</li>
+        <li>User-centered design principles</li>
       </ul>
     </section>
 
     <section>
-      <h2>Work Experience</h2>
-
-      <!-- Each role is grouped as a separate content unit -->
+      <h2>HCI Knowledge</h2>
       <article>
-        <h3>Professor of Cognitive Science</h3>
-        <p>University of California, San Diego</p>
+        <h3>Norman’s Action Cycle</h3>
+        <p>
+          Understanding how users form goals, execute actions,
+          and evaluate system feedback.
+        </p>
       </article>
 
       <article>
-        <h3>Director, Design Lab</h3>
-        <p>Founder of the Nielsen Norman Group</p>
+        <h3>GOMS Model</h3>
+        <p>
+          Ability to analyze user tasks using goals, operators,
+          methods, and selection rules.
+        </p>
+      </article>
+
+      <article>
+        <h3>Keystroke-Level Model (KLM)</h3>
+        <p>
+          Estimating task execution time based on low-level
+          interaction operators.
+        </p>
       </article>
     </section>
 
   </main>
 
-  <!-- Footer contains supplementary navigation and meta information -->
   <footer>
-    <p><a href="index.html">Back to Home</a></p>
+    <p>HCI Lab 01 – Structured Semantic Content</p>
   </footer>
 
 </body>

@@ -1,62 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
-
-  <!-- Page title shown in browser tab and announced by screen readers -->
-  <title>Don Norman – Contact</title>
+  <title>Contact – HCI Lab 01</title>
+  <!-- Minimal allowed CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    nav a {
+      color: #003366;
+    }
+    fieldset {
+      border: 1px solid #000000;
+      margin: 20px 0;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea {
+      margin-top: 5px;
+      padding: 5px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 20px;
+      background-color: #003366;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005599;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Page header: identifies the page purpose -->
   <header>
     <h1>Contact</h1>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="analysis.html">Norman vs GOMS</a></li>
+        <li><a href="norman2klm.html">Norman, GOMS & KLM</a></li>
+        
+      </ul>
+    </nav>
   </header>
 
-  <!-- Primary navigation: identical structure across all pages -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cv.html">CV</a></li>
-
-      <!-- Current page is indicated using aria-current -->
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
-    </ul>
-  </nav>
-
-  <!-- Main landmark: primary content of this page -->
   <main>
-    <form action="#" method="post">
-      
-      <!-- Groups related form controls and provides context -->
-      <fieldset>
-        <legend>Send a Message</legend>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>
+        Have questions about my HCI work or want to discuss interaction design? 
+        Please use the form below to send me a message. I'll respond as soon as possible.
+      </p>
+    </section>
 
-        <!-- Label explicitly associated with its input -->
-        <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br><br>
+    <section>
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Send a Message</legend>
+          
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
 
-        <!-- Textarea with clear label for screen readers -->
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
 
-        <!-- Submit button is keyboard accessible by default -->
-        <button type="submit">Send</button>
-      </fieldset>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
 
-    </form>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" cols="50" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section>
+      <h2>Alternative Contact Methods</h2>
+      <p>
+        You can also reach me through the following channels:
+      </p>
+      <ul>
+        <li>Email: <a href="mailto:student@university.edu">student@university.edu</a></li>
+        <li>Office Hours: Mondays and Wednesdays, 2:00 PM - 4:00 PM</li>
+        <li>Location: HCI Lab, Room 301, Computer Science Building</li>
+      </ul>
+    </section>
   </main>
 
-  <!-- Footer provides supplementary information -->
   <footer>
-    <p>Keyboard accessible form with screen-reader friendly labels.</p>
+    <p>HCI Lab 01 – Accessible contact form with proper labels and keyboard navigation</p>
   </footer>
-
 </body>
 </html>
